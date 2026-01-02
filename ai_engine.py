@@ -28,7 +28,7 @@ def get_response(
     candidate_count: int = 1
 ):
     history_text = "".join(
-        [f"{h['role']}: {h['content']}" for h in history_record]
+        [f"{h.role}: {h.content}" for h in history_record]
     )
   
     full_prompt = f"{prompt}\nHistory: {history_text}\nUser: {user_text}\nAtlas:"
