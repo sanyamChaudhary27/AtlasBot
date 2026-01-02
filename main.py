@@ -15,6 +15,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 
 @app.get("/")
+@app.head("/")
 def home():
   return  {"message": "Atlas is Online"}
 
