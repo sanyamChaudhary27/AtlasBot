@@ -1,6 +1,6 @@
 import threading
-import uvicron
-from fasapi import FastAPI
+import uvicorn
+from fastapi import FastAPI
 from bot import start_bot
 from database import init_db
 from contextlib import asynccontextmanager
@@ -19,4 +19,4 @@ def home():
   return  {"message": "Atlas is Online"}
 
 if __name__ == "__main__":
-   uvicorn.run(app, host="0.0.0.0", port=8000)
+   uvicorn.run(app, host="0.0.0.0", port=5000)

@@ -1,11 +1,12 @@
 import os
 import telebot
 from ai_engine import get_response
+from database import get_history, save_message
 
-BOT_TOKEN = os.environ("TELEGRAM_TOKEN")
+BOT_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 bot = telebot.TeleBot(BOT_TOKEN)
 
-@bot.message_handler(func=labda m: True)
+@bot.message_handler(func=lambda m: True)
 def handle_message(message):
    user_id = message.from_user.id
    user_text = message.text

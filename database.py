@@ -19,7 +19,7 @@ def get_history(
       ChatHistory
     ).where(
       ChatHistory.user_id == user_id
-    ).orderby(
+    ).order_by(
       ChatHistory.timestamp.desc()
     ).limit(limit)
    
