@@ -21,7 +21,7 @@ def get_response(
     history_record: list,
     prompt: str = System_prompt,
     limit: int = 15,
-    max_output_tokens: int = 64,
+    max_output_tokens: int = 256,
     temperature: float = 0.7,
     top_p: float = 0.8,
     top_k: int = 40,
